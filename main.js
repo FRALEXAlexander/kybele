@@ -33,7 +33,7 @@ io.on('connection', function (socket) {
 
         data.country = countrieIndex[data.country];
 
-
+        console.log(data);
 		//.emit("ESPsetCountry",data);
 	});
 	
