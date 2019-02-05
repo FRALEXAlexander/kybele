@@ -22,9 +22,7 @@ io.on('connection', function (socket) {
 	console.log("connection");
 	
 	
-		
-	
-<<<<<<< HEAD
+
     socket.on('setCountry', function (data) {
 
         console.log(data);
@@ -39,21 +37,6 @@ io.on('connection', function (socket) {
         console.log(data);
     });
 
-
-=======
-	socket.on('setCountry', function (data){
-		
-		console.log(data);
-        console.log(countrieIndex[data.country]);
-
-        data.length = countrieIndex[data.country].length;
-
-        data.country = countrieIndex[data.country];
-
-        console.log(data);
-		//.emit("ESPsetCountry",data);
-	});
->>>>>>> master
 	
 		
 });
