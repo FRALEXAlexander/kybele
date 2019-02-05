@@ -26,7 +26,7 @@ bool connection = false;
 //Objects
 //--------------------
 SocketIoClient webSocket;
-StaticJsonBuffer<200> databuffer;
+StaticJsonBuffer<1000> databuffer;
 
 
 
@@ -119,10 +119,16 @@ void onDisconnect(const char * payload, size_t length) {
 }
 void onESPsetCountry(const char * payload, size_t length) {
   Serial.println("ESPsetCountry");
+
+ 
+  
   JsonObject& root = databuffer.parseObject(payload);
 
-  int len = root["length"];
 
+  int len = root["length"];
+  
+ 
+  
   String RedS = root["rgb"][0];
   int red = RedS.toInt();
   String GreenS = root["rgb"][1];
@@ -145,9 +151,9 @@ void onESPsetCountry(const char * payload, size_t length) {
 
 
   for (int i = 0; i < len; i++) {
-   
+        String t = root["country"][i];
           strip.setPixelColor(root["country"][i], color);
-      
+        Serial.println(t);
   }
   databuffer.clear();
   strip.show();
