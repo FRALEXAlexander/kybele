@@ -281,6 +281,9 @@ public class Laender {
 		hmap.put("Europa", tmp);
 		// 5
 
+		////ALEX INDEX
+		
+		
 		// ------Anfang-Afrika
 		tmp = new Vector<Integer>();
 		tmp.add(54);
