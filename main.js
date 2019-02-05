@@ -24,18 +24,21 @@ io.on('connection', function (socket) {
 	
 		
 	
-	socket.on('setCountry', function (data){
-		
-		console.log(data);
+    socket.on('setCountry', function (data) {
+
+        console.log(data);
         console.log(countrieIndex[data.country]);
 
         data.length = countrieIndex[data.country].length;
 
         data.country = countrieIndex[data.country];
 
+
+        io.emit("ESPsetCountry", data);
         console.log(data);
-		//.emit("ESPsetCountry",data);
-	});
+    });
+
+
 	
 		
 });
