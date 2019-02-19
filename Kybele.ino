@@ -33,7 +33,7 @@ StaticJsonBuffer<1000> databuffer;
 
 #define PIN 2
 
-const int sizeOfLEDs = 100;
+const int sizeOfLEDs = 136;
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
