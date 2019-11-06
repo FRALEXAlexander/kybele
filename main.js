@@ -41,9 +41,6 @@ io.on('connection', function (socket) {
 		
 });
 
-
-
-
 app.use(express.static('./public'));
 
 app.listen(2000);
