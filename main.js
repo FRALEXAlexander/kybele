@@ -50,9 +50,9 @@ app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/control.html', function(req, res) {
+app.get('/about.html', function(req, res) {
     
-	res.sendFile(path.join(__dirname + '/control.html'));
+	res.sendFile(path.join(__dirname + '/about.html'));
 	
 });
 
@@ -69,12 +69,6 @@ app.get('/style.css', function(req, res) {
 	res.sendFile(path.join(__dirname + '/style.css'));
 	
 });
-app.get('/logoearth.png', function(req, res) {
-    
-	res.sendFile(path.join(__dirname + '/logoearth.png'));
-	
-});
-
 
 
 app.listen(2000);
