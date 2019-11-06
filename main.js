@@ -44,31 +44,6 @@ io.on('connection', function (socket) {
 
 
 
-app.get('/', function(req, res) {
-    
-	
-	res.sendFile(path.join(__dirname + '/index.html'));
-});
-
-app.get('/about.html', function(req, res) {
-    
-	res.sendFile(path.join(__dirname + '/about.html'));
-	
-});
-
-
-app.get('/js/socket.io.js', function(req, res) {
-    
-	res.sendFile(path.join(__dirname + '/js/socket.io.js'));
-	
-});
-
-
-app.get('/style.css', function(req, res) {
-    
-	res.sendFile(path.join(__dirname + '/style.css'));
-	
-});
-
+app.use(express.static('./public'));
 
 app.listen(2000);
