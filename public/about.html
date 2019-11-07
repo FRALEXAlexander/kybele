@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="Animierte Weltkarte">
 	<meta name="keywords" content="HTML,CSS">
 	<meta name="author" content="Jana Nina Friedrich">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 	<title>Home</title>
-
 </head>
-
 <body>
-	<nav class="navbar navbar-inverse" id="testabout">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/#">Kybele</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="/#">Home</a></li>
-				<li class="active"><a  href="/about.html">About</a></li>
-				<li><a title="I made the frontend" href="https://github.com/Clay8765">Jana Friedrich</a></li>
-				<li><a title="I made the hardware"href="https://github.com/Swift501">Ariane Krassnitzer</a></li>
-				<li><a title="I made the backend" href="https://github.com/FRALEXAlexander">Alexander Pichler</a></li>
-			</ul>
-		</div>
-	</nav>
-
+	<div id=navDiv>
+		<table id="navTable">
+			<td>
+				Kybele
+			</td>
+			<td>
+				<a href="/#">Home</a>
+			</td>
+			<td style="background-color: rgb(12, 12, 12);">
+				<a href="/about.html">About</a>
+			</td>
+			<td>
+				<a style="float: right;margin-right: 1vw;" title="I made the backend"
+					href="https://github.com/FRALEXAlexander">Alexander Pichler</a>
+				<a style="float: right;margin-right: 1vw;" title="I made the hardware"
+					href="https://github.com/Swift501">Ariane Krassnitzer</a>
+				<a style="float: right;margin-right: 1vw;" title="I made the frontend"
+					href="https://github.com/Clay8765">Jana Friedrich</a>
+			</td>
+		</table>
+	</div>
 	<div>
-		<p>Der Projektname Kybele wurde von der griechischen Göttermutter Kybele inspieriert, da Kybele eine Natur-, Erd- und Mondgöttin ist.</p>
-		<p>Das Freigegenstandsprojekt wurde im Jahr 2017 von den Schülerinnen Jana Friedrich und Ariane Krassnitzer als Einsteigerprojekt gegründet.</p>
-		<p>Doch wie so oft wurde das Projekt immer komplizierter und dauerte immer länger an, so dass der Schüler Alexander Pichler über Nacht bei dem Projekt einstieg und ausgeholfen hat</p>
+		<p>Der Projektname Kybele wurde von der griechischen Göttermutter Kybele inspieriert, da Kybele eine Natur-,
+			Erd- und Mondgöttin ist.</p>
+		<p>Das Freigegenstandsprojekt wurde im Jahr 2017 von den Schülerinnen Jana Friedrich und Ariane Krassnitzer als
+			Einsteigerprojekt gegründet.</p>
+		<p>Doch wie so oft wurde das Projekt immer komplizierter und dauerte immer länger an, so dass der Schüler
+			Alexander Pichler über Nacht bei dem Projekt einstieg und ausgeholfen hat</p>
 		<p>Das Projekt ist in zwei grobe Teile aufgebaut, Hardware und Software.</p>
 		<br>
 		<p>Hardware:</p>
-		<p>Besteht aus einer Landkarte hinter der wir LEDs angebracht haben. Die LEDs sind mit einem Mikrocontroller verbunden.</p>
+		<p>Besteht aus einer Landkarte hinter der wir LEDs angebracht haben. Die LEDs sind mit einem Mikrocontroller
+			verbunden.</p>
 		<p>Dieser Mikrocontroller (ESP32) ist mit einem Server verbunden, wo unsere Website läuft.</p>
 		<br>
 		<p>Software:</p>
 		<p>Unser Backend besteht aus Arduino(C#) und JavaScript. </p>
 		<p>Unser Frontend(Website) besteht aus HTML und CSS. </p>
 	</div>
-
-
 </body>
-<script src="js/jquery.min.js"></script>
-
-<script>
-</script>
 </html>

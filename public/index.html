@@ -9,33 +9,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 	<title>Home</title>
-
 </head>
 
 
 <body>
-
-	<nav class="navbar navbar-inverse" id="testhome">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/#">Kybele</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="/#">Home</a></li>
-				<li><a href="/about.html">About</a></li>
-				<li><a title="I made the frontend" href="https://github.com/Clay8765">Jana Friedrich</a></li>
-				<li><a title="I made the hardware" href="https://github.com/Swift501">Ariane Krassnitzer</a></li>
-				<li><a title="I made the backend" href="https://github.com/FRALEXAlexander">Alexander Pichler</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<select name="country" id="dropDownList">
+	<div id=navDiv>
+		<table id="navTable">
+			<td>
+				Kybele
+			</td>
+			<td style="background-color: rgb(12, 12, 12);">
+				<a href="/#">Home</a>
+			</td>
+			<td>
+				<a href="/about.html">About</a>
+			</td>
+			<td>
+				<a style="float: right;margin-right: 1vw;" title="I made the backend"
+					href="https://github.com/FRALEXAlexander">Alexander Pichler</a>
+				<a style="float: right;margin-right: 1vw;" title="I made the hardware"
+					href="https://github.com/Swift501">Ariane Krassnitzer</a>
+				<a style="float: right;margin-right: 1vw;" title="I made the frontend"
+					href="https://github.com/Clay8765">Jana Friedrich</a>
+			</td>
+		</table>
+	</div>
+	<select id="country">
 		<option value="Afghanistan">Afghanistan</option>
 		<option value="Africa">Afrika</option>
 
@@ -177,47 +177,39 @@
 		<option value="North America">Nordamerika</option>
 		<option value="South Amerika">S&uumldamerika</option>
 	</select>
-
-	<div class="marging" align="center">
-		<label class="font" id="redInput" for="red">RED: </label>
-		<input id="redInput" type="text" name="red_led" value="56">
+	<div id="redDIV" align="center">
+		<label class="font" style="color: rgb(214, 40, 40);">RED: </label>
+		<input id="redInput" type="range" name="red_led" value="56">
 	</div>
 	<div class="marging" align="center">
-		<label class="font" id="greenInput" for="green">GREEN: </label>
-		<input id="greenInput" type="text" name="green_led" value="190">
+		<label class="font" style="color: #50a040;">GREEN: </label>
+		<input id="greenInput" type="range" name="green_led" value="190">
 	</div>
 	<div class="marging" align="center">
-		<label class="font" id="blueInput" for="blue">BLUE: </label>
-		<input id="blueInput" type="text" name="blue_led" value="223">
+		<label class="font" style="color: rgb(47, 85, 199);">BLUE: </label>
+		<input id="blueInput" type="range" name="blue_led" value="223">
 	</div>
-
-	<div  align="center">
+	<div align="center">
 		<button class="button" style="vertical-align:middle" id="lumus"
 			onclick="state('on');"><span>LUMUS</span></button></a>
 	</div>
-	<div  align="center">
+	<div align="center">
 		<button class="button" style="vertical-align:middle" id="nox"
 			onclick="state('off');"><span>NOX</span></button></a>
 	</div>
-
 </body>
-
 <script src="js/socket.io.js"></script>
-<script src="js/jquery.min.js"></script>
-
 <script>
 	var ip = location.hostname;
 	ip = "http://" + ip + ":2200";
 	var socket = io.connect(ip, { 'forceNew': true });
 	console.log("connected to: " + ip);
-
 	function state(data) {
-		var country = document.getElementsByName("country")[0].value;
-		var red = document.getElementsByName("red_led")[0].value;
-		var green = document.getElementsByName("green_led")[0].value;
-		var blue = document.getElementsByName("blue_led")[0].value;
+		var country = document.getElementsById("country")[0].value;
+		var red = document.getElementsById("redInput")[0].value;
+		var green = document.getElementsById("greenInput")[0].value;
+		var blue = document.getElementsById("blueInput")[0].value;
 		socket.emit("setCountry", { "country": country, "rgb": [red, green, blue], "state": data });
 	}
 </script>
-
 </html>
