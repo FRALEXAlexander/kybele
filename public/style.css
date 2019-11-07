@@ -3,22 +3,18 @@
 	background-color: rgb(40, 40, 40);
 	border: 0px;
 }
-
 #testhome {
 	border-radius: 0px;
 	background-color: rgb(40, 40, 40);
 	border: 0px;
 }
-
 .font {
 	color: white;
 	font-family: 'Arial';
 }
-
 #home_color {
 	color: rgb(126, 55, 55);
 }
-
 #country {
 	color: black;
 	font-family: 'Arial';
@@ -29,19 +25,16 @@
 	display: block;
 	padding: 7px;
 	margin: 7% auto 30px auto;
-	width: 38%;
+	width: 40vw;
 }
-
 #lumus {
 	background-color: hsl(44, 92%, 54%);
 	font-family: 'Arial';
 }
-
 #nox {
 	background-color: #172a49;
 	font-family: 'Arial';
 }
-
 .button {
 	display: inline-block;
 	border-radius: 4px;
@@ -50,20 +43,18 @@
 	text-align: center;
 	font-size: 28px;
 	padding: 20px;
-	width: 38%;
+	width: 40vw;
 	transition: all 0.5s;
 	cursor: pointer;
 	margin: 5px;
 	border-radius: 15px;
 }
-
 .button span {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
 	transition: 0.5s;
 }
-
 .button span:after {
 	content: '\00bb';
 	position: absolute;
@@ -72,30 +63,18 @@
 	right: -20px;
 	transition: 0.5s;
 }
-
 .button:hover {
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
 .button:hover span {
 	padding-right: 25px;
 }
-
 .button:hover span:after {
 	opacity: 1;
 	right: 0;
 }
-
-label {
-	position: relative;
-	display: inline-block;
-	width: 130px;
-	font-family: 'Arial';
-}
-
 body {
 	background-image: url('background_earth.jpg');
-
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0;
@@ -103,8 +82,6 @@ body {
 	height: 100vh;
 	width: 100vw;
 }
-
-
 #navDiv{
 	width: 100vw;
 	height: 5vh;
@@ -114,7 +91,6 @@ body {
 	text-align: center;
 	padding: 0;
 }
-
 #navTable{
 	padding: 0;
 	width: 100%;
@@ -123,11 +99,6 @@ body {
     border: none;
     
 }
-
-.marging{
-	margin: 10px;
-}
-
 p{
 	color: white;
 	font-size: 20px;
@@ -139,3 +110,35 @@ a{
 a:hover{
 	color: white;
 }
+#colordiv{
+	margin: auto;
+	width: 40vw;
+	
+	padding: 0;
+	
+}
+#colordiv p{
+	display:inline-block;
+	height: 100%;
+	margin: 0;
+	font-size: 3.5vw;
+}
+#colordiv input{
+	-webkit-appearance: none;
+	outline: none;
+	display:inline-block;
+	height: 100%;
+	width: 53.5%;
+	margin: 0;
+	padding: 0;
+	background: #d3d3d3;
+	opacity: 0.5;
+}
+#colordiv input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 3vh;
+	background: rgb(150, 147, 147);
+	cursor: pointer;
+  }

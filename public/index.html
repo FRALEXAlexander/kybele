@@ -177,18 +177,27 @@
 		<option value="North America">Nordamerika</option>
 		<option value="South Amerika">S&uumldamerika</option>
 	</select>
-	<div id="redDIV" align="center">
-		<label class="font" style="color: rgb(214, 40, 40);">RED: </label>
-		<input id="redInput" type="range" name="red_led" value="56">
+
+	<div id="colordiv">
+		<p style="color: rgb(214, 40, 40); width: 30%;">RED</p>
+		<input id="redInput" type="range" name="red_led" min="0" max="255" value="255"
+			oninput="document.getElementById('redp').innerHTML=this.value">
+		<p style="color: rgb(214, 40, 40);" id="redp" style="float: right;">255</p>
 	</div>
-	<div class="marging" align="center">
-		<label class="font" style="color: #50a040;">GREEN: </label>
-		<input id="greenInput" type="range" name="green_led" value="190">
+
+	<div id="colordiv">
+		<p style="color: rgb(63, 230, 41);width: 30%;">GREEN</p>
+		<input id="greenInput" type="range" name="green_led" min="0" max="255" value="56"
+			oninput="document.getElementById('greenp').innerHTML=this.value">
+		<p style="color: rgb(63, 230, 41);" id="greenp" style="float: right;">56</p>
 	</div>
-	<div class="marging" align="center">
-		<label class="font" style="color: rgb(47, 85, 199);">BLUE: </label>
-		<input id="blueInput" type="range" name="blue_led" value="223">
+	<div id="colordiv">
+		<p style="color: rgb(13, 52, 230);width: 30%;">BLUE</p>
+		<input id="blueInput" type="range" name="blue_led" min="0" max="255" value="56"
+			oninput="document.getElementById('bluep').innerHTML=this.value">
+		<p style="color: rgb(13, 52, 230);" id="bluep" style="float: right;">56</p>
 	</div>
+
 	<div align="center">
 		<button class="button" style="vertical-align:middle" id="lumus"
 			onclick="state('on');"><span>LUMUS</span></button></a>
@@ -197,6 +206,7 @@
 		<button class="button" style="vertical-align:middle" id="nox"
 			onclick="state('off');"><span>NOX</span></button></a>
 	</div>
+
 </body>
 <script src="js/socket.io.js"></script>
 <script>
@@ -212,4 +222,5 @@
 		socket.emit("setCountry", { "country": country, "rgb": [red, green, blue], "state": data });
 	}
 </script>
+
 </html>
