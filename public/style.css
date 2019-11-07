@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+#test {
+	border-radius: 0px;
+	background-color: rgb(40, 40, 40);
+	border: 0px;
+}
+
+.bodystyle {
+	background-image: url('background_earth.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.font {
+	color: white;
+	font-family: 'Arial';
+}
+
+#home_color {
+	color: rgb(126, 55, 55);
+}
+
+>>>>>>> master
 #dropDownList {
 	color: black;
 	font-family: 'Arial';
@@ -51,11 +75,19 @@
 	right: -20px;
 	transition: 0.5s;
 }
+<<<<<<< HEAD
 
 .button:hover {
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+=======
+
+.button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+>>>>>>> master
 .button:hover span {
 	padding-right: 25px;
 }
