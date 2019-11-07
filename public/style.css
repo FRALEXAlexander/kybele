@@ -1,13 +1,13 @@
-nav.test {
+#testabout {
 	border-radius: 0px;
 	background-color: rgb(40, 40, 40);
 	border: 0px;
 }
 
-.bodystyle {
-	background-image: url('background_earth.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
+#testhome {
+	border-radius: 0px;
+	background-color: rgb(40, 40, 40);
+	border: 0px;
 }
 
 .font {
@@ -132,4 +132,9 @@ input{
 
 .marging{
 	margin: 10px;
+}
+
+p{
+	color: white;
+	font-size: 20px;
 }
