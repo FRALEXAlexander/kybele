@@ -16,8 +16,8 @@ const char* password = "iot..2015";
 //--------------------
 //Websocket Server
 //--------------------
-const char* serverIP = "10.68.131.7";
-const int serverPort  = 2200;
+const char* serverIP = "10.68.200.200";
+const int serverPort  = 2601;
 //--------------------
 //Variables
 //--------------------
