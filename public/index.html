@@ -179,23 +179,23 @@
 	</select>
 
 	<div id="colordiv">
-		<p style="color: #FF951A; width: 30%;font-family: 'Arial';font-size: 40px;">RED</p>
+		<p style="color: #FF951A; width: 27%;font-family: 'Arial';">RED</p>
 		<input id="redInput" type="range" name="red_led" min="0" max="255" value="255"
-			oninput="document.getElementById('redp').innerHTML=this.value">
-		<p style="color: #FF951A;font-family: 'Arial';float: right;font-size: 40px;" id="redp">255</p>
+			oninput="document.getElementById('redp').innerHTML=this.value; changeColor()">
+		<p style="color: #FF951A; font-family: 'Arial';float: right;" id="redp">255</p>
 	</div>
 
 	<div id="colordiv">
-		<p style="color: #FF951A;width: 30%;font-family: 'Arial'; font-size: 40px;">GREEN</p>
-		<input id="greenInput" type="range" name="green_led" min="0" max="255" value="56"
-			oninput="document.getElementById('greenp').innerHTML=this.value">
-		<p style="color: #FF951A;font-family: 'Arial';float: right;font-size: 40px;" id="greenp">56</p>
+		<p style="color: #FF951A;width: 27%;font-family: 'Arial';">GREEN</p>
+		<input id="greenInput" type="range" name="green_led" min="0" max="255" value="149"
+			oninput="document.getElementById('greenp').innerHTML=this.value; changeColor()">
+		<p style="color: #FF951A;font-family: 'Arial';float: right;" id="greenp">149</p>
 	</div>
 	<div id="colordiv">
-		<p style="color: #FF951A;width: 30%;font-family: 'Arial'; font-size: 40px;">BLUE</p>
-		<input id="blueInput" type="range" name="blue_led" min="0" max="255" value="56"
-			oninput="document.getElementById('bluep').innerHTML=this.value">
-		<p style="color: #FF951A;font-family: 'Arial';float: right;font-size: 40px;" id="bluep">56</p>
+		<p style="color: #FF951A;width: 27%;font-family: 'Arial';">BLUE</p>
+		<input id="blueInput" type="range" name="blue_led" min="0" max="255" value="26"
+			oninput="document.getElementById('bluep').innerHTML=this.value; changeColor()">
+		<p style="color: #FF951A;font-family: 'Arial';float: right;" id="bluep">26</p>
 	</div>
 
 	<div align="center">
@@ -214,12 +214,23 @@
 	ip = "http://" + ip + ":2200";
 	var socket = io.connect(ip, { 'forceNew': true });
 	console.log("connected to: " + ip);
+
 	function state(data) {
 		var country = document.getElementsById("country")[0].value;
 		var red = document.getElementsById("redInput")[0].value;
 		var green = document.getElementsById("greenInput")[0].value;
 		var blue = document.getElementsById("blueInput")[0].value;
 		socket.emit("setCountry", { "country": country, "rgb": [red, green, blue], "state": data });
+	}
+
+	function changeColor(){
+		var red = document.getElementById('redInput').value;
+		var green = document.getElementById('greenInput').value;
+		var blue = document.getElementById('blueInput').value;
+
+		document.getElementById('redp').style.color='rgb('+red+','+green+','+blue+')';
+		document.getElementById('greenp').style.color='rgb('+red+','+green+','+blue+')';
+		document.getElementById('bluep').style.color='rgb('+red+','+green+','+blue+')';
 	}
 </script>
 

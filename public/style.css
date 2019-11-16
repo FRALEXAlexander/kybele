@@ -1,11 +1,9 @@
 #testabout {
 	border-radius: 0px;
-	background-color: rgb(40, 40, 40);
 	border: 0px;
 }
 #testhome {
 	border-radius: 0px;
-	background-color: rgb(40, 40, 40);
 	border: 0px;
 }
 .font {
@@ -16,11 +14,11 @@
 	color: rgb(126, 55, 55);
 }
 #country {
-	color: black;
+	color: rgb(58, 52, 52);
 	font-family: 'Arial';
 	position: relative;
 	font-weight: 100px;
-	font-size: 30px;
+	font-size: 28px;
 	text-align: center;
 	display: block;
 	padding: 7px;
@@ -85,9 +83,9 @@ body {
 }
 #navDiv{
 	width: 100vw;
-	height: 5vh;
+	height: 5.5vh;
 	margin: 0;
-	background-color: rgb(51, 51, 51);
+	background-color: rgb(44, 44, 44);
 	font-size: 1.5vw;
 	text-align: center;
 	padding: 0;
@@ -109,27 +107,25 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	color: white;
+	color: rgb(189, 98, 86);
 }
 #colordiv{
 	margin: auto;
 	width: 40vw;
-	
 	padding: 0;
-	
 }
 #colordiv p{
 	display:inline-block;
 	height: 100%;
 	margin: 0;
-	font-size: 3.5vw;
+	font-size: 180%;
 }
 #colordiv input{
 	-webkit-appearance: none;
 	outline: none;
 	display:inline-block;
 	height: 100%;
-	width: 53.5%;
+	width: 57%;
 	margin: 0;
 	padding: 0;
 	background: #d3d3d3;
