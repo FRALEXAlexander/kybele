@@ -9,8 +9,12 @@
 #include "SPIFFS.h"
 #include <WebSocketsServer.h>
 // Replace with your network credentials
-const char* ssid = "htl-IoT";
-const char* password = "iot..2015";
+//const char* ssid = "htl-IoT";
+//const char* password = "iot..2015";
+
+const char* ssid = "FRALEX2.4Ghz";
+const char* password = "Martin1927";
+
 
 long previousMillis = 0;
 long interval = 1000;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 30%;
+        height: 100px;
+    }
+</style>
+<body>
+    <button onclick="send('R')">RED</button>
+    <button onclick="send('G')">GREEN</button>
+    <button onclick="send('B')">BLUE</button>
+    <button onclick="send('getPoti')">GET POTI</button>
+	<p id="poti"></p>
+</body>
+<script>
+	
+	var ip = location.hostname;
+
+    let socket = new WebSocket("ws://"+ip+":2000/");
+    socket.bufferType = "arraybuffer";
+    socket.onopen = function (event) {
+        console.log("WebSocket is open now.");
+    };
+    socket.onmessage = function (event) {
+        console.log("WebSocket message received:", event);
+    
+		if(event.data.includes("poti")){
+		document.getElementById("poti").innerHTML = event.data.substring(4) ;
+		}
+	};
+    console.log(socket);
+    function send(msg){
+    socket.send(msg);
+    }
+</script>
+</html>
