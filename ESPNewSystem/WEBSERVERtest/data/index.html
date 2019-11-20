@@ -1,43 +1,259 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Animierte Weltkarte">
+	<meta name="keywords" content="HTML,CSS">
+	<meta name="author" content="Jana N. Friedrich">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Home</title>
 </head>
-<style>
-    button {
-        width: 30%;
-        height: 100px;
-    }
-</style>
+
+
 <body>
-    <button onclick="send('R')">RED</button>
-    <button onclick="send('G')">GREEN</button>
-    <button onclick="send('B')">BLUE</button>
-    <button onclick="send('getPoti')">GET POTI</button>
-	<p id="poti"></p>
+	<div id="navDiv">
+		<table id="navTable">
+			<td style="font-family: 'Arial'; color: rgb(255, 109, 11);">
+				Kybele
+			</td>
+			<td style="background-color: rgb(12, 12, 12);">
+				<a href="/#">Home</a>
+			</td>
+			<td>
+				<a href="/about.html">About</a>
+			</td>
+			<td>
+				<a style="float: right;margin-right: 1vw" title="I made the backend"
+					href="https://github.com/FRALEXAlexander">Alexander Pichler</a>
+				<a style="float: right;margin-right: 1vw" title="I made the hardware"
+					href="https://github.com/Swift501">Ariane Krassnitzer</a>
+				<a style="float: right;margin-right: 1vw" title="I made the frontend"
+					href="https://github.com/Clay8765">Jana Friedrich</a>
+			</td>
+		</table>
+	</div>
+	<select id="country">
+		<option value="Afghanistan">Afghanistan</option>
+		<option value="Africa">Afrika</option>
+
+		<option value="Egypt">&Aumlgypten</option>
+		<option value="Alasca">Alaska</option>
+		<option value="Algeria">Algerien</option>
+
+		<option value="Angola">Angola</option>
+		<option value="Antarctic">Antarktis</option>
+		<option value="Argentina">Argentinien</option>
+
+		<option value="Ethiopia">&Aumlthiopien</option>
+		<option value="Australia">Australien</option>
+		<option value="Baltic States">Baltische Staaten</option>
+
+		<option value="Bolivien">Bolivien</option>
+		<option value="Botswana">Botsuana</option>
+		<option value="Brazil">Brasilien</option>
+
+		<option value="Bolivia">Bulgarien</option>
+		<option value="Burkina Faso">Burkina Faso</option>
+		<option value="China">China</option>
+
+		<option value="Coged'ivoire">Coged'ivoire</option>
+		<option value="Germany">Deutschland</option>
+		<option value="Ecuador">Ecuador</option>
+
+		<option value="England">England</option>
+		<option value="Finland">Finnland</option>
+		<option value="France">Frankreich</option>
+
+		<option value="Gabon">Gabun</option>
+		<option value="Georgia">Georgien</option>
+		<option value="Greece">Griechenland</option>
+
+		<option value="Greenland">Gr&oumlnland</option>
+		<option value="Guatemala">Guatemala</option>
+		<option value="Guinea">Guinea</option>
+
+		<option value="Guyana">Guyana</option>
+		<option value="India">Indien</option>
+		<option value="Indonesia">Indonesien</option>
+
+		<option value="Iraq">Irak</option>
+		<option value="Iran">Iran</option>
+		<option value="Ireland">Irland</option>
+
+		<option value="Iceland">Island</option>
+		<option value="Italy">Italien</option>
+		<option value="Japan">Japan</option>
+
+		<option value="Yemen">Jemen</option>
+		<option value="Cameroon">Kamerun</option>
+		<option value="Canada">Kanada</option>
+
+		<option value="Kazakhstan">Kasachstan</option>
+		<option value="Kenya">Kenia</option>
+		<option value="Colombia">Kolumbien</option>
+
+		<option value="Congo">Kongo</option>
+		<option value="Korea">Korea</option>
+		<option value="Cuba">Kuba</option>
+
+		<option value="Libya">Libyen</option>
+		<option value="Madagascar">Madagaskar</option>
+		<option value="Malaysia">Malaysia</option>
+
+		<option value="Mali">Mali</option>
+		<option value="Morocco">Marokko</option>
+		<option value="Mauritania">Mauretanien</option>
+
+		<option value="Mexico">Mexiko</option>
+		<option value="Mozambique">Mosambik</option>
+		<option value="Myanmar">Myanmar</option>
+
+		<option value="Namibia">Namibia</option>
+		<option value="New Zealand">Neuseeland</option>
+		<option value="Netherlands">Niederlande</option>
+
+		<option value="Niger">Niger</option>
+		<option value="Nigeria">Nigeria</option>
+		<option value="Norway">Norwegen</option>
+
+		<option value="Oman">Oman</option>
+		<option value="Austria">&Oumlsterreich</option>
+		<option value="Pakistan">Pakistan</option>
+
+		<option value="Panama">Panama</option>
+		<option value="Paraguay">Paraguay</option>
+		<option value="Peru">Peru</option>
+
+		<option value="Philippines">Philippinen</option>
+		<option value="Poland">Polen</option>
+		<option value="Portugal">Portugal</option>
+
+		<option value="Romania">Rum&aumlnien</option>
+		<option value="Russia">Russland</option>
+		<option value="Sahara">Sahara</option>
+
+		<option value="Zambia">Sambia</option>
+		<option value="Saudi Arabia">Saudi-Arabien</option>
+		<option value="Sweden">Schweden</option>
+
+		<option value="Switzerland">Schweiz</option>
+		<option value="Senegal">Senegal Gambia</option>
+		<option value="Serbia">Serbien</option>
+
+		<option value="Zimbabwe">Simbabwe</option>
+		<option value="Somalia">Somalia</option>
+		<option value="Spain">Spanien</option>
+
+		<option value="South Africa">S&uumldafrika</option>
+		<option value="Sudan">Sudan</option>
+		<option value="Suriname">Suriname</option>
+
+		<option value="Syria">Syrien</option>
+		<option value="Tanzania">Tansania</option>
+		<option value="Thailand">Thailand</option>
+
+		<option value="Chad">Tschad</option>
+		<option value="Turkey">T&uumlrkei</option>
+		<option value="Turkmenistan">Turkmenistan</option>
+
+		<option value="Uganda">Uganda</option>
+		<option value="Ukraine">Ukraine</option>
+		<option value="Hungary">Ungarn</option>
+
+		<option value="Uruguay">Uruguay</option>
+		<option value="USA">USA</option>
+		<option value="Uzbekistan">Usbekistans</option>
+
+		<option value="Venezuela">Venezuela</option>
+		<option value="Belarus">Wei&szligrussland</option>
+		<option value="Zaire">Zaire</option>
+
+		<option value="Central Africa">Zentralafrika</option>
+		<option value="Asia">Asien</option>
+		<option value="Europe">Europa</option>
+		<option value="North America">Nordamerika</option>
+		<option value="South Amerika">S&uumldamerika</option>
+	</select>
+
+	<div id="colordiv">
+		<p style="color: #FF951A; width: 27%;font-family: 'Arial';">RED</p>
+		<input id="redInput" type="range" name="red_led" min="0" max="255" value="255"
+			oninput="document.getElementById('redp').innerHTML=this.value; changeColor()">
+		<p style="color: #FF951A; font-family: 'Arial';float: right;" id="redp">255</p>
+	</div>
+
+	<div id="colordiv">
+		<p style="color: #FF951A;width: 27%;font-family: 'Arial';">GREEN</p>
+		<input id="greenInput" type="range" name="green_led" min="0" max="255" value="149"
+			oninput="document.getElementById('greenp').innerHTML=this.value; changeColor()">
+		<p style="color: #FF951A;font-family: 'Arial';float: right;" id="greenp">149</p>
+	</div>
+	<div id="colordiv">
+		<p style="color: #FF951A;width: 27%;font-family: 'Arial';">BLUE</p>
+		<input id="blueInput" type="range" name="blue_led" min="0" max="255" value="26"
+			oninput="document.getElementById('bluep').innerHTML=this.value; changeColor()">
+		<p style="color: #FF951A;font-family: 'Arial';float: right;" id="bluep">26</p>
+	</div>
+
+	<div align="center">
+		<button class="button" style="vertical-align:middle" id="lumus"
+			onclick="state('on');"><span>LUMUS</span></button></a>
+	</div>
+	<div align="center">
+		<button class="button" style="vertical-align:middle" id="nox"
+			onclick="state('off');"><span>NOX</span></button></a>
+	</div>
+
 </body>
 <script>
-	
 	var ip = location.hostname;
-
-    let socket = new WebSocket("ws://"+ip+":2000/");
-    socket.bufferType = "arraybuffer";
-    socket.onopen = function (event) {
-        console.log("WebSocket is open now.");
-    };
-    socket.onmessage = function (event) {
-        console.log("WebSocket message received:", event);
-    
-		if(event.data.includes("poti")){
-		document.getElementById("poti").innerHTML = event.data.substring(4) ;
-		}
+	let socket = new WebSocket("ws://" + ip + ":2000/");
+	socket.bufferType = "arraybuffer";
+	socket.onopen = function (event) {
+		console.log("WebSocket is open now.");
 	};
-    console.log(socket);
-    function send(msg){
-    socket.send(msg);
-    }
+	let jsonData
+	fetch('./data.json')
+		.then(response => {
+			return response.json()
+		})
+		.then(data => {
+			// Work with JSON data here
+			jsonData = data;
+			console.log(Object.keys(jsonData).length)
+			console.log(jsonData);
+		})
+		.catch(err => {
+			// Do something for an error here
+		})
+
+
+
+	function state(data) {
+		var country = document.getElementById("country").value;
+		var red = document.getElementById("redInput").value;
+		var green = document.getElementById("greenInput").value;
+		var blue = document.getElementById("blueInput").value;
+		let countryData = jsonData[country];
+		console.log(countryData)
+		let len = jsonData[country].length;
+		socket.send('{"len":'+len+' ,"country":[' + countryData + '], "rgb": [' + red + ',' + green + ',' + blue + '], "state":' + data + '}');
+
+
+	}
+
+	function changeColor() {
+		var red = document.getElementById('redInput').value;
+		var green = document.getElementById('greenInput').value;
+		var blue = document.getElementById('blueInput').value;
+
+		document.getElementById('redp').style.color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		document.getElementById('greenp').style.color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		document.getElementById('bluep').style.color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+	}
 </script>
+
 </html>
