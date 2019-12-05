@@ -154,7 +154,7 @@ a:hover {
 #about {
 	color: rgb(194, 52, 34);
 	background-color:rgb(251, 189, 147);
-	font-size: 1.3vw;
+	font-size: 1.2vw;
 	border-radius: 15px;
 	font-family: 'Arial';
 	margin: 1.5% 12% 1.5% 5%;
@@ -162,7 +162,7 @@ a:hover {
 }
 
 h1{
-	font-size: 2.5vw;
+	font-size: 2vw;
 	margin: 9px auto 1px 9px;
 	font-family: 'Arial';
 }
@@ -175,7 +175,7 @@ h2{
 #div_hardware {
 	color: rgb(255, 109, 11);
 	background-color: rgb(255, 220, 220);
-	font-size: 1.3vw;
+	font-size: 1.2vw;
 	border-radius: 15px;
 	font-family: 'Arial';
 	margin: 1% 6% 1.5% 22%;
@@ -186,7 +186,7 @@ h2{
 
 	color: rgb(245, 231, 231);
 	background-color: rgb(189, 98, 86);
-	font-size: 1.3vw;
+	font-size: 1.2vw;
 	border-radius: 15px;
 	font-family: 'Arial';
 	margin: 1% 28% 1.5% 11%;
