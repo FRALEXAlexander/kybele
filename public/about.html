@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="Animierte Weltkarte">
@@ -9,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Home</title>
 </head>
+
 <body>
 	<div id=navDiv>
 		<table id="navTable">
@@ -31,23 +33,30 @@
 			</td>
 		</table>
 	</div>
-	<div>
+	<div id="about">
+			<h1><u>Allgemein:</u></h1>
 		<p>Der Projektname Kybele wurde von der griechischen Göttermutter Kybele inspieriert, da Kybele eine Natur-,
 			Erd- und Mondgöttin ist.</p>
 		<p>Das Freigegenstandsprojekt wurde im Jahr 2017 von den Schülerinnen Jana Friedrich und Ariane Krassnitzer als
-			Einsteigerprojekt gegründet.</p>
-		<p>Doch wie so oft wurde das Projekt immer komplizierter und dauerte immer länger an, so dass der Schüler
-			Alexander Pichler über Nacht bei dem Projekt einstieg und ausgeholfen hat</p>
-		<p>Das Projekt ist in zwei grobe Teile aufgebaut, Hardware und Software.</p>
-		<br>
-		<p>Hardware:</p>
+			Einsteigerprojekt gegründet.</br>
+		Doch wie so oft wurde das Projekt immer komplizierter und dauerte immer länger an, so dass
+			Alexander Pichler über Nacht bei dem Projekt einstieg und ausgeholfen hat.</p>
+		<p>Das Projekt kann man in zwei Teile aufteilen, Hardware und Software:</p>
+	</div>
+	<div id="div_hardware">
+		<h2><u>Hardware:</u></h2>
 		<p>Besteht aus einer Landkarte hinter der wir LEDs angebracht haben. Die LEDs sind mit einem Mikrocontroller
-			verbunden.</p>
-		<p>Dieser Mikrocontroller (ESP32) ist mit einem Server verbunden, wo unsere Website läuft.</p>
-		<br>
-		<p>Software:</p>
-		<p>Unser Backend besteht aus Arduino(C#) und JavaScript. </p>
-		<p>Unser Frontend(Website) besteht aus HTML und CSS. </p>
+			verbunden, welcher sich über WLAN auf unsere eigene Webseite verbindet und von dort seine Befehle erhällt.</br>
+		Der ESP befindet sich in einem von uns designten Gehäuse, welches wir vom 3D-Drucker ausdrucken haben lassen.</br>
+		Auf diesem Gehäuse ist von außen ein OLED-Display zu sehen welches die IP-Adresse des ESP anzeigt.
+			Diese geben wir aus um damit auf die Webseite zugreifen zu können.</p>
+	</div>
+	<div id="div_software">
+		<h2><u>Software:</u></h2>
+		<p>Auf dem ESP32 (µController) läuft ein Webserver, welcher die Steuerungseite anzeigt.</br>
+		Um den Userinput zu verarbeiten, gibt es eine Socketconnection zwischen dem Browser und dem µController. </br>
+			Die Eingaben wird verarbeitet und in Befehle für die LEDs umwandelt.</p>
 	</div>
 </body>
+
 </html>
